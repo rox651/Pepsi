@@ -1,0 +1,55 @@
+export const productsData = [
+  {
+    name: 'Pepsi',
+    image: '../assets/images/can-pepsi.png',
+    price: '$2',
+    description: `CARBONATED WATER HIGH FRUCTOSE CORN SYRUP CARAMEL COLOR SUGAR PHOSPHORIC ACID CAFFEINE CITRIC ACID NATURAL FLAVOR
+        `,
+    fillColor: 'rgba(0, 101, 195, 0.9)',
+    delay: '0.2s',
+  },
+  {
+    name: 'Pepsi Zero Sugar',
+    image: '../assets/images/can-pepsi-zero-sugar.png',
+    price: '$4',
+    description: `CARBONATED WATER CARAMEL COLOR PHOSPHORIC ACID ASPARTAME POTASSIUM BENZOATE (PRESERVES FRESHNESS) CAFFEINE NATURAL FLAVOR ACESULFAME POTASSIUM CITRIC ACID PANAX GINSENG ROOT EXTRACT CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR)
+        `,
+    fillColor: 'rgba(0,0,0)',
+    delay: '0.4s',
+  },
+  {
+    name: 'Diet Pepsi',
+    image: '../assets/images/Diet-Pepsi-v2_12oz.png',
+    price: '$6',
+    description: `CARBONATED WATER CARAMEL COLOR ASPARTAME PHOSPHORIC ACID POTASSIUM BENZOATE (PRESERVES FRESHNESS) CAFFEINE CITRIC ACID NATURAL FLAVOR ACESULFAME POTASSIUM`,
+    fillColor: 'rgb(135, 135, 135)',
+    delay: '0.6s',
+  },
+  {
+    name: 'Nitro Pepsi Vanilla',
+    image: '../assets/images/PEP_NItro_DraftCola_Can_Vanilla.png',
+    price: '$6',
+    description: `CARBONATED WATER HIGH FRUCTOSE CORN SYRUP CARAMEL COLOR NATURAL AND ARTIFICIAL FLAVOR SODIUM POLYPHOSPHATES (TO PROTECT FLAVOR) PHOSPHORIC ACID CAFFEINE SODIUM BENZOATE (PRESERVES FRESHNESS) POTASSIUM SORBATE (PRESERVES FRESHNESS) TARTARIC ACID CITRIC ACID GUM ARABIC QUILLAIA EXTRACT CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR) SALT NITROGEN
+        `,
+    fillColor: 'rgb(197, 187, 153)',
+    delay: '0.8s',
+  },
+  {
+    name: 'Nitro Pepsi',
+    image: '../assets/images/PEP_NItro_DraftCola_Can.png',
+    price: '$6',
+    description: `CARBONATED WATER HIGH FRUCTOSE CORN SYRUP CARAMEL COLOR NATURAL FLAVOR SODIUM POLYPHOSPHATES (TO PROTECT FLAVOR) PHOSPHORIC ACID CAFFEINE SODIUM BENZOATE (PRESERVES FRESHNESS) POTASSIUM SORBATE (PRESERVES FRESHNESS) TARTARIC ACID GUM ARABIC CITRIC ACID SALT QUILLAIA EXTRACT CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR) NITROGEN
+        `,
+    fillColor: 'rgb(36, 66, 153)',
+    delay: '1s',
+  },
+  {
+    name: 'Pepsi Mango',
+    image: '../assets/images/can-pepsi-mango.png',
+    price: '$6',
+    description: `CARBONATED WATER HIGH FRUCTOSE CORN SYRUP CLARIFIED MANGO JUICE CONCENTRATE CARAMEL COLOR SODIUM POLYPHOSPHATES (TO PROTECT FLAVOR) PHOSPHORIC ACID NATURAL FLAVOR POTASSIUM SORBATE (PRESERVES FRESHNESS) CAFFEINE GUM ARABIC CITRIC ACID CALCIUM DISODIUM EDTA (TO PROTECT FLAVOR)
+        `,
+    fillColor: 'rgb(255, 143, 28)',
+    delay: '1.2s',
+  },
+]

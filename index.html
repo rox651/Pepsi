@@ -124,89 +124,49 @@
 
     <section class="products">
       <div class="max-width">
-        <div class="products_grid">
-          <article class="products_ctn">
-            <h3 class="products_ctn--name">Pepsi</h3>
-            <img src="./assets/images/can-pepsi.png" alt="" class="products_ctn--img" />
-
-            <div class="products_ctn_hover">
-              <svg class="product__hover-background" preserveAspectRatio="none" viewBox="0 0 1366 560">
-                <path
-                  style="fill: #004883"
-                  class="product__hover-background-polygon"
-                  d="M1366,0 L0,0 L0,560 C0,560 195.7478,522.504464 514.786857,488.758481 C833.825914,455.012499 1126.55971,423.766218 1296.334,227.556243 C1324.27188,195.400148 1347.65642,160.534137 1366,123.685276 L1366,0 Z"
-                ></path>
-              </svg>
-              <h3 class="products_ctn_hover--name">Pepsi</h3>
-              <p class="products_ctn_hover--price">$2</p>
-            </div>
-          </article>
-          <article class="products_ctn">
-            <h3 class="products_ctn--name">Pepsi</h3>
-            <img src="./assets/images/can-pepsi-mango.png" alt="" class="products_ctn--img" />
-            <div class="products_ctn_hover">
-              <svg class="product__hover-background" preserveAspectRatio="none" viewBox="0 0 1366 560">
-                <path
-                  style="fill: #004883"
-                  class="product__hover-background-polygon"
-                  d="M1366,0 L0,0 L0,560 C0,560 195.7478,522.504464 514.786857,488.758481 C833.825914,455.012499 1126.55971,423.766218 1296.334,227.556243 C1324.27188,195.400148 1347.65642,160.534137 1366,123.685276 L1366,0 Z"
-                ></path>
-              </svg>
-              <h3 class="products_ctn_hover--name">Pepsi</h3>
-              <p class="products_ctn_hover--price">$2</p>
-            </div>
-          </article>
-          <article class="products_ctn">
-            <h3 class="products_ctn--name">Pepsi</h3>
-            <img src="./assets/images/can-pepsi-zero-sugar.png" alt="" class="products_ctn--img" />
-            <div class="products_ctn_hover">
-              <svg class="product__hover-background" preserveAspectRatio="none" viewBox="0 0 1366 560">
-                <path
-                  style="fill: #004883"
-                  class="product__hover-background-polygon"
-                  d="M1366,0 L0,0 L0,560 C0,560 195.7478,522.504464 514.786857,488.758481 C833.825914,455.012499 1126.55971,423.766218 1296.334,227.556243 C1324.27188,195.400148 1347.65642,160.534137 1366,123.685276 L1366,0 Z"
-                ></path>
-              </svg>
-              <h3 class="products_ctn_hover--name">Pepsi</h3>
-              <p class="products_ctn_hover--price">$2</p>
-            </div>
-          </article>
-          <article class="products_ctn">
-            <h3 class="products_ctn--name">Pepsi</h3>
-            <img src="./assets/images/PEP_NItro_DraftCola_Can.png" alt="" class="products_ctn--img" />
-            <div class="products_ctn_hover">
-              <svg class="product__hover-background" preserveAspectRatio="none" viewBox="0 0 1366 560">
-                <path
-                  style="fill: #004883"
-                  class="product__hover-background-polygon"
-                  d="M1366,0 L0,0 L0,560 C0,560 195.7478,522.504464 514.786857,488.758481 C833.825914,455.012499 1126.55971,423.766218 1296.334,227.556243 C1324.27188,195.400148 1347.65642,160.534137 1366,123.685276 L1366,0 Z"
-                ></path>
-              </svg>
-              <h3 class="products_ctn_hover--name">Pepsi</h3>
-              <p class="products_ctn_hover--price">$2</p>
-            </div>
-          </article>
-          <article class="products_ctn">
-            <h3 class="products_ctn--name">Pepsi</h3>
-            <img src="./assets/images/PEP_NItro_DraftCola_Can_Vanilla.png" alt="" class="products_ctn--img" />
-            <div class="products_ctn_hover">
-              <svg class="product__hover-background" preserveAspectRatio="none" viewBox="0 0 1366 560">
-                <path
-                  style="fill: #004883"
-                  class="product__hover-background-polygon"
-                  d="M1366,0 L0,0 L0,560 C0,560 195.7478,522.504464 514.786857,488.758481 C833.825914,455.012499 1126.55971,423.766218 1296.334,227.556243 C1324.27188,195.400148 1347.65642,160.534137 1366,123.685276 L1366,0 Z"
-                ></path>
-              </svg>
-              <h3 class="products_ctn_hover--name">Pepsi</h3>
-              <p class="products_ctn_hover--price">$2</p>
-            </div>
-          </article>
-        </div>
+        <h2 class="products-title">Products</h2>
+        <div class="products_grid animate-element"></div>
       </div>
     </section>
+
+    <footer class="contact-us"></footer>
+
+    <div class="products-modal" role="dialog">
+      <article class="products-modal_info">
+        <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+          <path
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+          ></path>
+        </svg>
+        <div class="products-modal_info_content">
+          <h3 class="products-modal_info_content--name">Pepsi</h3>
+          <p class="products-modal_info_content--price">$2</p>
+          <p class="products-modal_info_content--description">
+            CARBONATED WATER HIGH FRUCTOSE CORN SYRUP CARAMEL COLOR SUGAR PHOSPHORIC ACID CAFFEINE CITRIC ACID NATURAL
+            FLAVOR
+          </p>
+        </div>
+        <figure class="products-modal_info--figure">
+          <img src="./assets/images/can-pepsi.png" alt="" />
+        </figure>
+
+        <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+          />
+        </svg>
+        <p class="products_modal_indicator"><span>1</span>/10</p>
+        <svg class="arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+          />
+        </svg>
+      </article>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/scroll-animations.js"></script>
+    <script src="./js/products.js" type="module"></script>
   </body>
 </html>
