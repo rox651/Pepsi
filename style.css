@@ -109,6 +109,7 @@ body.overflow-active {
   font-weight: 600;
   font-size: 1.6em;
   color: var(--white);
+  border: 2px solid transparent;
   transition: 0.3s;
 }
 
@@ -116,6 +117,7 @@ body.overflow-active {
   background-color: var(--blue);
 
   color: var(--white);
+  border: 2px solid var(--white);
 }
 
 /* loader  */
@@ -322,42 +324,141 @@ body.overflow-active {
 
 /* about us  */
 .about-us {
+  position: relative;
   padding: 50px 0;
+  background-color: var(--blue);
 }
+
 .about-us .max-width {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  align-items: center;
+  min-height: 600px;
 }
 
 .about-us_images {
   display: flex;
+  justify-content: center;
   align-items: flex-end;
+  filter: drop-shadow(50px 0 50px #40afde);
 }
 .about-us_images--img {
   position: relative;
   object-fit: contain;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0;
+  transform: translateX(100%) rotate(20deg);
 }
 
+.about-us_images.show .about-us_images--img {
+  transform: translateX(0%) rotate(0deg);
+  opacity: 1;
+}
 .about-us_images--img.image-1 {
-  width: 300px;
-  height: 550px;
-  z-index: 6;
+  max-width: 200px;
+  max-height: 550px;
+  transition-delay: 0.3s;
 }
 
 .about-us_images--img.image-2 {
-  width: 300px;
-  height: 500px;
-  left: -50px;
-  z-index: 5;
+  max-width: 200px;
+  transition-delay: 0.5s;
+  max-height: 330px;
 }
 .about-us_images--img.image-3 {
-  width: 300px;
-
-  height: 400px;
-  left: -150px;
-  z-index: 4;
+  max-width: 180px;
+  max-height: 300px;
+  transition-delay: 0.8s;
 }
+
+.about-us_info {
+  position: relative;
+  z-index: 10;
+}
+.about-us_info--title {
+  font-size: 6em;
+  line-height: 100%;
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.about-us_info--link {
+  margin: 20px 0 0 auto;
+}
+
+/* products   */
+.products {
+  padding: 50px 0;
+}
+.products_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.products_ctn {
+  width: 100%;
+  height: 200px;
+  border: 1px solid hsla(60, 3%, 81%, 0.482);
+  overflow: hidden;
+  padding: 15px 10px;
+  position: relative;
+}
+
+.products_ctn--img {
+  max-width: 75%;
+  margin: 15px auto 0;
+}
+
+.products_ctn--name {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.products_ctn_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+.products_ctn_hover svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%) scale(1);
+  transition: 0.5s;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.products_ctn_hover--name,
+.products_ctn_hover--price {
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s 0.2s;
+  font-size: 1.7em;
+}
+
+.products_ctn:hover .products_ctn_hover svg {
+  transform: translate(50%, -50%) scale(6);
+}
+
+.products_ctn:hover .products_ctn_hover--name,
+.products_ctn:hover .products_ctn_hover--price {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* ANIMATIONS  */
 
 @keyframes showMenuLink {
@@ -415,6 +516,41 @@ body.overflow-active {
   .hero-home_text {
     font-size: 2.5em;
   }
+
+  /* about - us  */
+  .about-us_images--img.image-1 {
+    max-width: 230px;
+    max-height: 400px;
+  }
+
+  .about-us_images--img.image-2 {
+    max-width: 180px;
+    max-height: 400px;
+  }
+  .about-us_images--img.image-3 {
+    max-width: 180px;
+    max-height: 300px;
+  }
+
+  .about-us_info--title {
+    font-size: 7.5em;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* about us  */
+
+  .about-us .max-width {
+    grid-template-columns: 1fr;
+    min-height: max-content;
+  }
+  .about-us_info--title {
+    text-align: center;
+  }
+
+  .about-us_info--link {
+    margin: 20px auto 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -449,5 +585,33 @@ body.overflow-active {
   }
   .hero-home_link {
     margin-top: 0;
+  }
+
+  /* about us  */
+
+  .about-us .about-us_images--img {
+    max-width: 93px;
+    max-height: max-content;
+  }
+  .about-us .about-us_images--img.image-1 {
+    max-width: 125px;
+    filter: drop-shadow(0px 10px 14px #000000d7);
+    z-index: 5;
+    order: 2;
+  }
+  .about-us .about-us_images--img.image-2 {
+    order: 1;
+    z-index: 0;
+    right: -20px;
+  }
+  .about-us .about-us_images--img.image-3 {
+    order: 3;
+    max-width: 88px;
+    left: -20px;
+    z-index: 0;
+  }
+
+  .about-us_info--title {
+    font-size: 4em;
   }
 }
