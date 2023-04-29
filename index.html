@@ -38,21 +38,9 @@
         </div>
 
         <nav class="custom-header_nav">
-          <a
-            style="--link-delay: 0.3s"
-            href="https://www.pepsi.com/#!products"
-            class="custom-header_nav--link underline-link"
-            >Products</a
-          >
-          <a style="--link-delay: 0.6s" href="https://p.pepsi.com/signup" class="custom-header_nav--link underline-link"
-            >Newsletter</a
-          >
-          <a
-            style="--link-delay: 0.9s"
-            href="https://contact.pepsico.com/pepsi"
-            class="custom-header_nav--link underline-link"
-            >Contact us</a
-          >
+          <a style="--link-delay: 0.3s" href="#about-us" class="custom-header_nav--link underline-link">About Us</a>
+          <a style="--link-delay: 0.6s" href="#products" class="custom-header_nav--link underline-link">Products</a>
+          <a style="--link-delay: 0.9s" href="#news" class="custom-header_nav--link underline-link">Newsletter</a>
         </nav>
         <svg
           role="button"
@@ -104,11 +92,11 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
           Eaque omnis temporibus tempora rerum similique, est maxime mollitia!
         </p>
-        <a class="hero-home_link custom-link" href="https://www.pepsi.com/#!products">See Products</a>
+        <a class="hero-home_link custom-link" href="/#products">See Products</a>
       </div>
     </main>
 
-    <section class="about-us">
+    <section class="about-us" id="about-us">
       <div class="max-width">
         <div class="about-us_images animate-element">
           <img src="./assets/images/can-pepsi.png" alt="" class="about-us_images--img image-1" />
@@ -117,19 +105,60 @@
         </div>
         <article class="about-us_info">
           <h2 class="about-us_info--title">What are you waiting for?</h2>
-          <a class="about-us_info--link custom-link" href="https://www.pepsi.com/#!products">See Products</a>
+          <a class="about-us_info--link custom-link" href="/#products">See Products</a>
         </article>
+      </div>
+      <div class="about-us_wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
       </div>
     </section>
 
-    <section class="products">
+    <section class="products" id="products">
       <div class="max-width">
         <h2 class="products-title">Products</h2>
         <div class="products_grid animate-element"></div>
       </div>
     </section>
 
-    <footer class="contact-us"></footer>
+    <aside class="contact-us" id="news">
+      <div class="max-width">
+        <article class="contact-us_info">
+          <h2 class="contact-us_info--title">Don't forget any news about us</h2>
+          <form id="form" name="newsletter" class="contact-us_news">
+            <div class="inputs-ctn">
+              <div class="inputs-ctn_field">
+                <input type="email" class="input" name="email" placeholder="Email" />
+                <span class="alert" role="alert"></span>
+              </div>
+              <input type="submit" class="submit custom-link" value="Suscribe" />
+            </div>
+            <span class="valid-message" role="alert"
+              >Form send correctly. <br />
+              Stay tuned for our news</span
+            >
+          </form>
+        </article>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <div class="max-width">
+        <h3 class="copyright">&copy; <span></span> Homero Bracamonte - All rights reserved</h3>
+      </div>
+      <div class="footer_wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </footer>
 
     <div class="products-modal" role="dialog">
       <article class="products-modal_info">
@@ -168,5 +197,6 @@
     <script src="./js/app.js"></script>
     <script src="./js/scroll-animations.js"></script>
     <script src="./js/products.js" type="module"></script>
+    <script src="./js/form.js" type="module"></script>
   </body>
 </html>

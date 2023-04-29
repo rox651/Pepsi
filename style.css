@@ -17,6 +17,10 @@
   --font-1: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img,
 picture,
 svg,
@@ -106,6 +110,7 @@ body.overflow-active {
   max-width: max-content;
   padding: 15px 40px;
 
+  cursor: pointer;
   font-weight: 600;
   font-size: 1.6em;
   color: var(--white);
@@ -379,6 +384,7 @@ body.overflow-active {
 }
 .about-us_info--title {
   font-size: 6em;
+  font-weight: 900;
   line-height: 100%;
   text-align: right;
   text-transform: uppercase;
@@ -389,12 +395,33 @@ body.overflow-active {
   margin: 20px 0 0 auto;
 }
 
+.about-us_wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about-us_wave svg {
+  position: relative;
+  display: block;
+  width: calc(149% + 1.3px);
+  height: 73px;
+}
+
+.about-us_wave .shape-fill {
+  fill: #ffffff;
+}
+
 /* products   */
 .products {
   padding: 50px 0;
 }
 .products-title {
   font-size: 5em;
+  font-weight: 900;
   line-height: 100%;
   text-align: center;
   margin-bottom: 20px;
@@ -469,6 +496,7 @@ body.overflow-active {
   visibility: hidden;
   transition: 0.5s 0.2s;
   font-size: 1.7em;
+  text-shadow: 0 0 10px #00000081;
 }
 
 .products_ctn:hover .products_ctn_hover svg {
@@ -481,22 +509,6 @@ body.overflow-active {
 .products_ctn:hover .products_ctn_hover--price {
   visibility: visible;
   opacity: 1;
-}
-
-.products-modal .arrow-right {
-  width: 30px;
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  cursor: pointer;
-}
-
-.products-modal .arrow-left {
-  width: 30px;
-  transform: rotate(-180deg);
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
 }
 
 /* product modal  */
@@ -539,7 +551,21 @@ body.overflow-active {
   position: relative;
   overflow: hidden;
 }
+.products-modal .arrow-right {
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+}
 
+.products-modal .arrow-left {
+  width: 30px;
+  transform: rotate(-180deg);
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
 .products-modal_info .close {
   position: absolute;
   right: 20px;
@@ -622,6 +648,118 @@ body.overflow-active {
   font-weight: 900;
 }
 
+/* newsletter | contact us  */
+.contact-us {
+  padding: 50px 0;
+}
+
+.contact-us_info--title {
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contact-us_news {
+  display: grid;
+  gap: 30px;
+  min-width: 300px;
+}
+.contact-us_news * {
+  height: max-content;
+}
+
+.contact-us_news .inputs-ctn {
+  display: grid;
+  gap: 10px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.contact-us_news .input {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid var(--blue);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  font-size: 2em;
+}
+
+.contact-us_news .input:focus {
+  outline: none;
+  background-color: rgba(0, 101, 195, 0.131);
+}
+
+.contact-us_news .alert {
+  color: rgb(255, 67, 34);
+  display: block;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.5em;
+  display: none;
+  margin-top: 10px;
+}
+.contact-us_news .alert.active {
+  display: block;
+}
+
+.contact-us_news .valid-message {
+  text-align: center;
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 2em;
+  display: none;
+}
+
+.contact-us_news .valid-message.active {
+  display: block;
+}
+
+/* footer  */
+
+.footer {
+  background-color: var(--blue);
+  height: 150px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.footer .max-width {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.footer .copyright {
+  font-size: 2em;
+  text-align: center;
+  color: var(--white);
+}
+
+.footer_wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.footer_wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 73px;
+}
+
+.footer_wave .shape-fill {
+  fill: #ffffff;
+}
 /* ANIMATIONS  */
 
 @keyframes showMenuLink {
@@ -799,6 +937,9 @@ body.overflow-active {
     font-size: 4em;
   }
   /* products  */
+  .products-title {
+    font-size: 4em;
+  }
   .products_ctn--name {
     font-size: 1em;
     text-align: center;
@@ -815,5 +956,21 @@ body.overflow-active {
   }
   .products-modal_info_content--description {
     font-size: 1.3em;
+  }
+
+  /* contact us  */
+
+  .contact-us_info--title {
+    font-size: 4em;
+  }
+
+  /* footer  */
+
+  .footer {
+    padding: 87px 0;
+  }
+
+  .footer .copyright {
+    font-size: 1.5em;
   }
 }
