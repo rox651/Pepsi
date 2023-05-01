@@ -566,6 +566,7 @@ body.overflow-active {
   position: absolute;
   left: 20px;
   bottom: 20px;
+  cursor: pointer;
 }
 .products-modal_info .close {
   position: absolute;

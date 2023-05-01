@@ -36,8 +36,6 @@ productModalClose.addEventListener('click', closeProductModal)
 productModalNextButton.addEventListener('click', nextProductModal)
 productModalPreviousButton.addEventListener('click', previousProductModal)
 
-productFigureModal.addEventListener('transitionend', transitionEnd)
-
 //functions
 function generateCardsProducts(product) {
   const { name, image, delay, price, fillColor } = product
@@ -81,16 +79,20 @@ function updateProductModal() {
 function nextProductModal() {
   productModal.classList.add('back-transition')
   currentProductModal = currentProductModal >= productsData.length - 1 ? 0 : currentProductModal + 1
+  animateAndUpdateModal()
 }
 
 function previousProductModal() {
   productModal.classList.add('back-transition')
   currentProductModal = currentProductModal == 0 ? productsData.length - 1 : currentProductModal - 1
+  animateAndUpdateModal()
 }
 
-function transitionEnd() {
-  productModal.classList.remove('back-transition')
-  updateProductModal()
+function animateAndUpdateModal() {
+  setTimeout(() => {
+    productModal.classList.remove('back-transition')
+    updateProductModal()
+  }, 500)
 }
 
 function openProductModal() {
